@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video to Article Converter</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Rokiest&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="static/favicon.ico.png">
+</head>
+<body>
+    <div class="container d-flex flex-column justify-content-center align-items-center min-vh-100 text-center">
+        <div class="logo mb-4">
+            <img src="assets\logo.png" alt="Logo">
+        </div>
+
+        <div class="input-container text-center">
+            <h2>Enter YouTube Link</h2>
+            <input type="text" class="form-control mb-3" id="youtubeLink" placeholder="Paste YouTube link here">
+            <div class="keyword-input-container">
+                <h3>Add Keywords (Optional, max 9)</h3>
+                <input type="text" class="form-control" id="keywordInput" placeholder="Type keywords separated by commas and press Enter">
+                <div id="keywordTags" class="mt-2"></div>
+                <small id="keywordCounter">0/9 keywords added</small>
+            </div>
+            <button class="btn btn-primary rounded mt-3" id="convertButton">Convert to Article</button>
+        </div>
+
+        <!-- Loading spinner -->
+        <div id="loadingSpinner" class="spinner-border text-primary mt-3 d-none" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+
+        <div id="outputContainer" class="d-none mt-4">
+            <!-- Button to copy text -->
+            <button id="copyButton" class="btn btn-secondary mb-2">Copy Text</button>
+            <div id="output">
+                
+                <p id="articleContent"></p>
+            </div>
+        </div>
+
+        
+
+        <footer class="mt-5">
+            <p>
+                <a href="terms.html">Terms & Conditions</a> | 
+                <a href="privacy.html">Privacy Policy</a>
+            </p>
+        </footer>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
